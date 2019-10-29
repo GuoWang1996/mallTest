@@ -4,13 +4,13 @@
     <resultMap id="esProductListMap" type="com.macro.mall.tiny.nosql.elasticsearch.document.EsProduct" autoMapping="true">
         <id column="id" jdbcType="BIGINT" property="id" />
         <collection property="attrValueList" columnPrefix="attr_" ofType="com.macro.mall.tiny.nosql.elasticsearch.document.EsProductAttributeValue">
-            <id column="id" property="id" jdbcType="BIGINT"/>
-            <result column="product_attribute_id" property="productAttributeId" jdbcType="BIGINT"/>
-            <result column="value" property="value" jdbcType="VARCHAR"/>
-            <result column="type" property="type"/>
+            <id column=lt column="type" property="type"/>
             <result column="name" property="name"/>
         </collection>
-    </resultMap>
+    </"id" property="id" jdbcType="BIGINT"/>
+            <result column="product_attribute_id" property="productAttributeId" jdbcType="BIGINT"/>
+            <result column="value" property="value" jdbcType="VARCHAR"/>
+            <resuresultMap>
     <select id="getAllEsProductList" resultMap="esProductListMap">
         select
             p.id id,
